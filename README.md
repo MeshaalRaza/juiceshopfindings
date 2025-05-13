@@ -1,15 +1,61 @@
-# Juice Shop Security Fixes
+# 🔐 Juice Shop Security Fixes – Internship Project
 
-This repository contains modifications to the OWASP Juice Shop project to improve its security as part of a Cybersecurity Internship Task.
+This repository contains enhanced security implementations applied to a sample Node.js application based on OWASP Juice Shop, as part of a Cybersecurity Internship (Weeks 1–6).
 
-## 🔒 Security Improvements
+---
 
+## 📌 Security Fixes Overview
+
+### ✅ Week 1–3 Recap
 - Input validation using `validator`
-- Password hashing using `bcrypt`
-- JWT-based authentication with `jsonwebtoken`
-- Secure HTTP headers using `helmet`
-- Logging activities with `winston`
+- Password hashing with `bcrypt`
+- JWT-based login system
+- Helmet for basic HTTP header security
+- Winston for logging
 
-## 📄 Report
+---
 
-See `Report.txt` for a full summary of vulnerabilities found and fixes applied.
+## 🚀 Week 4–6 Additions
+
+### 🔹 Week 4: Server Hardening
+- `express-rate-limit`: Prevent brute-force and DoS
+- `helmet` CSP & HSTS added
+- Global error handling
+
+### 🔹 Week 5: Web Attack Protection
+- CSRF Protection using `csurf`
+- CORS configuration with `cors`
+- Role-based access preparation via JWT (bonus-ready)
+
+### 🔹 Week 6: Secure Deployment & Monitoring
+- Auto log monitoring using Winston
+- Docker image hardened (optional)
+- Fail2Ban & ModSecurity (bonus WAF simulation)
+
+---
+
+## 🎯 Bonus Challenge
+- **Zero Trust**: JWT role-based auth structure
+- **WAF Simulation**: ModSecurity via NGINX on Docker (documented)
+- **Social Engineering Awareness**: GoPhish phishing simulation mock
+
+---
+
+## 📁 Folder Structure
+/routes/user.js # Protected routes
+server.js # Secure backend server
+README.md # Full documentation
+security.log # Winston logging
+
+---
+
+## ⚠️ CSRF Usage Notes
+CSRF token is sent as a cookie. The client must retrieve and include it in every POST request.
+
+---
+
+## 🧪 Testing
+- Tools used: OWASP ZAP, Burp Suite, SQLMap, Nikto
+- All scans passed post-implementation
+
+
